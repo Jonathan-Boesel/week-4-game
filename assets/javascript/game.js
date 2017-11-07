@@ -47,7 +47,7 @@ var Killed = 0;
 
 $("#restart").hide()
 
-if (Killed === 3) {
+if (Killed > 2) {
     $("#Message1").text(("YOU WIN!!!"))
     $("#restart").show()
     console.log("You win")
@@ -421,4 +421,13 @@ $("#attackbutton").on("click", function() {
         $("#restart").show()
         console.log("German lost")
     }
+    if (Killed > 2) {
+        $("#message1").text(("YOU WIN!!!"))
+        $("#restart").show()
+        console.log("You win")
+    }
 });
+
+$("#restart").on("click", function() {
+    window.location.reload()
+})

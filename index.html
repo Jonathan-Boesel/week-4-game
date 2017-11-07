@@ -36,47 +36,57 @@
             </button>
         </div>
         <div class="row">
-            <h2>Your Character</h2>
-        </div>
-        <div id="playercharacter" class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <h2>Your Character</h2>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-4">
+                <h2>Current Enemy</h2>
+            </div>
 
         </div>
         <div class="row">
-            <h2>Defenders Left</h2>
+            <div class="col-md-1"></div>
+            <div class="col-md-4" id=playercharacter></div>
+            <div class="col-md-3">
+                <div class="row">
+                    <button id="attackbutton">
+                        ATTACK!
+                    </button>
+                </div>
+                <div class="row">
+                    <div id="message1">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="message2">
+
+                    </div>
+                </div>
+                <div class="row" id=restart>
+                    <button>
+                        Restart!
+                    </button>
+                </div>
+
+            </div>
+            <div class="col-md-4" id=currentdefender></div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <h2>Defenders Left</h2>
+            </div>
+
         </div>
         <div class="row" id="defendersleft">
 
         </div>
 
-        <div class="row" id=attack>
-            <button id="attackbutton">
-                ATTACK!
-            </button>
 
-        </div>
-
-        <div class="row">
-            <h2>Current Enemy</h2>
-        </div>
-
-        <div id="currentdefender" class="row">
-
-        </div>
-        <div class="row">
-            <div id="message1">
-
-            </div>
-        </div>
-        <div class="row">
-            <div id="message2">
-
-            </div>
-        </div>
-        <div class="row" id=restart>
-            <button>
-                Restart!
-            </button>
-        </div>
 
     </div>
     <!-- end container -->

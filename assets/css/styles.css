@@ -1,9 +1,31 @@
+body {
+    background: url(../images/maxresdefault.jpg);
+    background-size: 1365px
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+#message1 {
+    color: white;
+}
+
+#message2 {
+    color: white;
+}
+
 #character1 {
     background: url(../images/maximus.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: green;
@@ -15,10 +37,10 @@
 
 #character2 {
     background: url(../images/commodus.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: green;
@@ -30,10 +52,10 @@
 
 #character3 {
     background: url(../images/tigrisOfGaul.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: green;
@@ -45,10 +67,10 @@
 
 #character4 {
     background: url(../images/germanic.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: green;
@@ -60,10 +82,10 @@
 
 #defender1 {
     background: url(../images/maximus.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: red;
@@ -75,10 +97,10 @@
 
 #defender2 {
     background: url(../images/commodus.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: red;
@@ -90,10 +112,10 @@
 
 #defender3 {
     background: url(../images/tigrisOfGaul.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: red;
@@ -105,10 +127,10 @@
 
 #defender4 {
     background: url(../images/germanic.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: red;
@@ -120,10 +142,10 @@
 
 #player1 {
     background: url(../images/maximus.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: green;
@@ -135,10 +157,10 @@
 
 #player2 {
     background: url(../images/commodus.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: green;
@@ -150,10 +172,10 @@
 
 #player3 {
     background: url(../images/tigrisOfGaul.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: green;
@@ -165,10 +187,10 @@
 
 #player4 {
     background: url(../images/germanic.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: green;
@@ -180,10 +202,10 @@
 
 #enemy1 {
     background: url(../images/maximus.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: black;
@@ -195,10 +217,10 @@
 
 #enemy2 {
     background: url(../images/commodus.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: black;
@@ -210,10 +232,10 @@
 
 #enemy3 {
     background: url(../images/tigrisOfGaul.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: black;
@@ -225,10 +247,10 @@
 
 #enemy4 {
     background: url(../images/germanic.jpg);
-    background-size: 200px 200px;
+    background-size: 150px 150px;
     background-position: center;
-    height: 250px;
-    width: 204px;
+    height: 200px;
+    width: 154px;
     margin: 5px;
     border-width: 5px;
     border-color: black;
