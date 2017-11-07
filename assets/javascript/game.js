@@ -44,12 +44,14 @@ var Germanic = {
 };
 var Killed = 0;
 
+
+$("#restart").hide()
+
 if (Killed === 3) {
     $("#Message1").text(("YOU WIN!!!"))
     $("#restart").show()
     console.log("You win")
 }
-$("#restart").hide()
 
 $("#character1").on("click", function() {
     $("#character1").appendTo("#playercharacter")
