@@ -44,6 +44,11 @@ var Germanic = {
 };
 var Killed = 0;
 
+if (Killed === 3) {
+    $("#Message1").text(("YOU WIN!!!"))
+    $("#restart").show()
+    console.log("You win")
+}
 $("#restart").hide()
 
 $("#character1").on("click", function() {
@@ -56,7 +61,7 @@ $("#character1").on("click", function() {
     $("#character3").attr("id", "defender3");
     $("#character4").attr("id", "defender4");
     Maximus.isPlayer = true;
-    console.log(Maximus.isPlayer);
+    console.log("Maximus is player " + Maximus.isPlayer);
 
 });
 
@@ -70,6 +75,7 @@ $("#character2").on("click", function() {
     $("#character3").attr("id", "defender3");
     $("#character4").attr("id", "defender4");
     Commodus.isPlayer = true;
+    console.log("Commodus is player " + Commodus.isPlayer);
 });
 
 $("#character3").on("click", function() {
@@ -82,6 +88,7 @@ $("#character3").on("click", function() {
     $("#character2").attr("id", "defender2");
     $("#character4").attr("id", "defender4");
     Tigris.isPlayer = true;
+    console.log("Tigris is player " + Tigris.isPlayer);
 
 });
 
@@ -95,6 +102,7 @@ $("#character4").on("click", function() {
     $("#character3").attr("id", "defender3");
     $("#character2").attr("id", "defender2");
     Germanic.isPlayer = true;
+    console.log("Germanic is player " + Germanic.isPlayer);
 });
 
 
@@ -102,6 +110,7 @@ $(document).on('click', '#defender2', function() {
     $("#defender2").appendTo("#currentdefender")
     $("#defender2").attr("id", "enemy2");
     Commodus.isEnemy = true;
+    Commodus.isPlayer = false;
     console.log(Commodus.isEnemy);
 });
 
@@ -109,12 +118,14 @@ $(document).on('click', '#defender1', function() {
     $("#defender1").appendTo("#currentdefender")
     $("#defender1").attr("id", "enemy1");
     Maximus.isEnemy = true;
+    Maximus.isPlayer = false;
 });
 
 $(document).on('click', '#defender3', function() {
     $("#defender3").appendTo("#currentdefender")
     $("#defender3").attr("id", "enemy3");
     Tigris.isEnemy = true;
+    Tigris.isPlayer = false;
     console.log(Commodus.isEnemy);
     console.log(Tigris.isEnemy);
 });
@@ -123,6 +134,7 @@ $(document).on('click', '#defender4', function() {
     $("#defender4").appendTo("#currentdefender")
     $("#defender4").attr("id", "enemy4");
     Germanic.isEnemy = true;
+    Germanic.isPlayer = false;
 });
 
 $(".maximus").html(Maximus.name)
@@ -207,6 +219,7 @@ $("#attackbutton").on("click", function() {
     if ((Maximus.isPlayer === true) && (Maximus.health <= 0)) {
         $("#message1").text("YOU LOSE!")
         $("#restart").show()
+        console.log("Commodus lost")
     }
 
     if ((Commodus.isPlayer === true) && (Germanic.isEnemy === true) && (Commodus.health > 0) && (Germanic.isAlive === true)) {
@@ -272,6 +285,7 @@ $("#attackbutton").on("click", function() {
     if ((Commodus.isPlayer === true) && (Commodus.health <= 0)) {
         $("#message1").text("YOU LOSE!")
         $("#restart").show()
+        console.log("Commodus lost")
     }
 
     if ((Tigris.isPlayer === true) && (Maximus.isEnemy === true) && (Tigris.health > 0) && (Maximus.isAlive === true)) {
@@ -337,6 +351,7 @@ $("#attackbutton").on("click", function() {
     if ((Tigris.isPlayer === true) && (Tigris.health <= 0)) {
         $("#message1").text("YOU LOSE!")
         $("#restart").show()
+        console.log("Tigris lost")
     }
 
     if ((Germanic.isPlayer === true) && (Maximus.isEnemy === true) && (Germanic.health > 0) && (Maximus.isAlive === true)) {
@@ -402,12 +417,6 @@ $("#attackbutton").on("click", function() {
     if ((Germanic.isPlayer === true) && (Germanic.health <= 0)) {
         $("#message1").text("YOU LOSE!")
         $("#restart").show()
+        console.log("German lost")
     }
-
-    if (Killed = 3) {
-        $("#Message1").text(("YOU WIN!!!"))
-        $("#restart").show()
-    }
-
-
 });
