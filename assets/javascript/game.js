@@ -12,7 +12,11 @@ function Character(id, tag, name, health, ap, cap, isPlayer, isDefender, isEnemy
     $(document).on("click", "#character" + this.id, () => {
         for (var i = 0; i < characters.length; i++) {
             if ((id) != characters[i].id) {
+                $("#defenderslefttag").show();
+                $("#playercharactertag").show();
+                $("#currentdefendertag").show();
                 var selector = "#character" + characters[i].id;
+
                 $(selector).appendTo("#defendersleft");
                 $(selector).attr("id", "defender" + characters[i].id);
             }
@@ -26,11 +30,14 @@ function Character(id, tag, name, health, ap, cap, isPlayer, isDefender, isEnemy
         }
     });
     $(document).on("click", "#defender" + this.id, () => {
-        var selector = "#defender" + this.id;
-        $(selector).appendTo("#currentdefender");
-        $(selector).attr("id", "enemy" + this.id);
-        this.isEnemy = true;
-        $("#attackbutton").show()
+        if (hasEnemy == false) {
+            hasEnemy = true;
+            var selector = "#defender" + this.id;
+            $(selector).appendTo("#currentdefender");
+            $(selector).attr("id", "enemy" + this.id);
+            this.isEnemy = true;
+            $("#attackbutton").show()
+        }
     });
 }
 var Maximus = new Character("1", "maximus", "Maximus", 150, 20, 20, false, true, false, true);
@@ -44,14 +51,22 @@ var characters = [
     Germanic
 ];
 var Killed = 0;
+var hasEnemy = false;
 
 $("#restart").hide();
 $("#attackbutton").hide();
+$("#defenderslefttag").hide();
+$("#playercharactertag").hide();
+$("#currentdefendertag").hide();
 
 $(".maximushealth").html("Health: " + Maximus.health);
 $(".commodushealth").html("Health: " + Commodus.health);
 $(".tigrishealth").html("Health: " + Tigris.health);
 $(".germanichealth").html("Health: " + Germanic.health);
+$("#maximusap").html("AP: " + Maximus.ap);
+$("#commodusap").html("AP: " + Commodus.ap);
+$("#tigrisap").html("AP: " + Tigris.ap);
+$("#germanicap").html("AP: " + Germanic.ap);
 
 $("#attackbutton").on("click", () => {
     var player;
@@ -69,13 +84,19 @@ $("#attackbutton").on("click", () => {
     if (player.health > 0 && enemy.isAlive) {
         enemy.health = enemy.health - player.ap;
         $("#message1").html("You hit " + enemy.name + " for " + player.ap);
-        $("#message2").html(enemy.name + " hit you for " + enemy.cap);
-        player.ap = player.ap + (player.ap * .25);
-        $("." + enemy.tag + "health").html("Health: " + enemy.health);
-        player.health = player.health - enemy.cap;
-        $("." + player.tag + "health").html("Health: " + player.health);
+        player.ap = Math.round(player.ap + (player.ap * .20));
+        $("#" + player.tag + "ap").html("AP: " + player.ap)
+        if (enemy.health > 0) {
+            $("#message2").html(enemy.name + " hit you for " + enemy.cap);
+
+            $("." + enemy.tag + "health").html("Health: " + enemy.health);
+            player.health = player.health - enemy.cap;
+            $("." + player.tag + "health").html("Health: " + player.health);
+        }
+
         if (enemy.health <= 0) {
             enemy.isAlive = false;
+            hasEnemy = false;
             Killed++;
             $("#enemy" + enemy.id).remove();
             $("#message1").text("You killed " + enemy.name + "!");
